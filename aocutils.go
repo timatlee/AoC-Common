@@ -12,6 +12,21 @@ func Hello() string {
 	return "Hello."
 }
 
+// Return the min and max values of an array of ints
+func MinMaxInt(array []int) (int, int) {
+	var max int = array[0]
+	var min int = array[0]
+	for _, value := range array {
+		if max < value {
+			max = value
+		}
+		if min > value {
+			min = value
+		}
+	}
+	return min, max
+}
+
 // Reads a file from the current directory and packs it into a array of strings.
 func Readfile(filename string) []string {
 	dir, _ := os.Getwd()
