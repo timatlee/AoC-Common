@@ -13,7 +13,7 @@ func Hello() string {
 }
 
 // Reads a file from the current directory and packs it into a array of strings.
-func readfile(filename string) []string {
+func Readfile(filename string) []string {
 	dir, _ := os.Getwd()
 
 	file, err := os.Open(dir + "/" + filename)
